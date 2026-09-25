@@ -529,6 +529,289 @@ EKS
 
 ---
 
+
+# Learning Milestones
+
+These milestones are the checkpoints we will use to decide whether you are ready to move to the next level. A phase can be technically completed while a milestone requires you to demonstrate that you can actually build, troubleshoot, explain, and automate the platform.
+
+## 🟢 Milestone 1 — Kubernetes Developer
+
+### Knowledge
+- [ ] Explain Kubernetes architecture.
+- [ ] Explain control plane and worker-node responsibilities.
+- [ ] Explain Pods, Deployments, ReplicaSets, and Services.
+- [ ] Explain ConfigMaps and Secrets.
+- [ ] Explain resource requests and limits.
+- [ ] Explain readiness, liveness, and startup probes.
+- [ ] Understand basic Kubernetes networking.
+
+### Practical skills
+- [ ] Deploy an application.
+- [ ] Scale an application.
+- [ ] Perform a rolling update.
+- [ ] Roll back a deployment.
+- [ ] Troubleshoot CrashLoopBackOff.
+- [ ] Troubleshoot Pending Pods.
+- [ ] Troubleshoot a Service that cannot reach Pods.
+
+### Milestone project
+Build a production-like local application with:
+- [ ] 3 replicas
+- [ ] Health probes
+- [ ] Resource requests and limits
+- [ ] ConfigMap
+- [ ] Secret
+- [ ] Service
+- [ ] NetworkPolicy
+
+**Gate:** Explain the complete request path and troubleshoot a deliberately broken deployment without following a copy/paste solution.
+
+---
+
+## 🟡 Milestone 2 — Kubernetes Administrator
+
+### Knowledge
+- [ ] Scheduling basics.
+- [ ] Nodes and node lifecycle.
+- [ ] Storage.
+- [ ] Kubernetes DNS.
+- [ ] NetworkPolicy.
+- [ ] RBAC.
+- [ ] PodDisruptionBudget.
+- [ ] Affinity and anti-affinity.
+- [ ] Topology spread constraints.
+- [ ] Kubernetes troubleshooting workflow.
+
+### Practical skills
+- [ ] Drain a node safely.
+- [ ] Recover from node failure.
+- [ ] Debug DNS and networking.
+- [ ] Debug storage issues.
+- [ ] Implement RBAC.
+- [ ] Distribute workloads for high availability.
+
+### Milestone project
+Build a multi-node environment and demonstrate:
+- [ ] Workload distribution.
+- [ ] Node failure recovery.
+- [ ] Network isolation.
+- [ ] RBAC restrictions.
+- [ ] Safe node draining.
+
+**Gate:** Given a broken workload, identify whether the failure is caused by the application, Pod, Service, network, node, or scheduler.
+
+---
+
+## 🟠 Milestone 3 — AWS EKS Engineer
+
+### Knowledge
+- [ ] AWS VPC architecture.
+- [ ] Public vs private subnets.
+- [ ] Route tables.
+- [ ] NAT Gateway.
+- [ ] Security Groups.
+- [ ] IAM.
+- [ ] ECR.
+- [ ] EKS architecture.
+- [ ] EKS add-ons.
+- [ ] AWS VPC CNI.
+- [ ] EBS CSI.
+- [ ] EKS Pod Identity.
+
+### Practical skills
+- [ ] Design an EKS VPC.
+- [ ] Create an EKS cluster.
+- [ ] Create managed node groups.
+- [ ] Configure EKS add-ons.
+- [ ] Deploy an application.
+- [ ] Expose an application.
+- [ ] Troubleshoot AWS/Kubernetes networking.
+
+### Milestone project
+Build:
+```text
+AWS VPC
+   |
+   v
+EKS
+   |
+   v
+Managed Node Group
+   |
+   v
+Kubernetes Application
+```
+
+**Gate:** Explain how traffic, IAM, networking, DNS, and compute interact from AWS infrastructure to a running Pod.
+
+---
+
+## 🔵 Milestone 4 — Terraform EKS Engineer
+
+### Knowledge
+- [ ] Terraform modules.
+- [ ] Terraform state.
+- [ ] Remote backend.
+- [ ] Variables and outputs.
+- [ ] Resource dependencies.
+- [ ] IAM with Terraform.
+- [ ] EKS with Terraform.
+- [ ] Environment separation.
+- [ ] CI validation and plan workflows.
+
+### Practical skills
+- [ ] Build reusable VPC modules.
+- [ ] Build reusable EKS modules.
+- [ ] Manage IAM with Terraform.
+- [ ] Manage EKS add-ons.
+- [ ] Manage ECR.
+- [ ] Run Terraform validation and formatting checks.
+- [ ] Generate and review Terraform plans.
+- [ ] Apply infrastructure through an automated workflow.
+
+### Milestone project
+Provision the complete EKS foundation using Terraform with no manual AWS console configuration:
+```text
+Terraform
+   |
+   +--> VPC
+   +--> IAM
+   +--> EKS
+   +--> System Node Group
+   +--> ECR
+   +--> Add-ons
+```
+
+**Gate:** Destroy and recreate the environment from code and explain Terraform state, dependencies, and recovery considerations.
+
+---
+
+## 🟣 Milestone 5 — Platform Engineer
+
+### Knowledge
+- [ ] GitOps principles.
+- [ ] Argo CD architecture.
+- [ ] Argo CD Applications.
+- [ ] ApplicationSets.
+- [ ] Environment promotion.
+- [ ] Kubernetes scheduling.
+- [ ] Karpenter architecture.
+- [ ] NodePools.
+- [ ] EC2NodeClass.
+- [ ] On-Demand and Spot capacity.
+- [ ] Consolidation and disruption.
+- [ ] Prometheus.
+- [ ] PromQL.
+- [ ] Grafana.
+- [ ] Alerting.
+
+### Practical skills
+- [ ] Deploy applications with Argo CD.
+- [ ] Implement self-healing.
+- [ ] Implement Git-based promotion.
+- [ ] Configure Karpenter.
+- [ ] Provision nodes dynamically.
+- [ ] Use Spot capacity appropriately.
+- [ ] Observe scheduling decisions.
+- [ ] Build Prometheus queries.
+- [ ] Build Grafana dashboards.
+- [ ] Create operational alerts.
+
+### Milestone project
+Build the complete platform flow:
+```text
+Git
+ |
+ v
+CI/CD
+ |
+ v
+ECR
+ |
+ v
+Argo CD
+ |
+ v
+EKS
+ |
+ +--> Scheduler
+       |
+       v
+   Karpenter
+       |
+       v
+     EC2
+       |
+       v
+ Application
+
+EKS
+ |
+ v
+Prometheus
+ |
+ v
+Grafana
+ |
+ v
+Alerts
+```
+
+**Gate:** Scale workloads beyond existing capacity, explain why a node was provisioned, trace the deployment from Git to Pod, and diagnose a failed deployment using observability data.
+
+---
+
+## 🔴 Milestone 6 — Production Kubernetes / Platform Engineer
+
+### Knowledge
+- [ ] High availability.
+- [ ] Disaster recovery.
+- [ ] Backup and restore.
+- [ ] EKS and Kubernetes upgrades.
+- [ ] Security and least privilege.
+- [ ] RBAC.
+- [ ] NetworkPolicy.
+- [ ] Cost optimization.
+- [ ] SLO / SLI concepts.
+- [ ] Incident management.
+- [ ] Capacity planning.
+- [ ] Production troubleshooting.
+
+### Practical skills
+- [ ] Perform an EKS upgrade.
+- [ ] Perform a node upgrade.
+- [ ] Recover from node failure.
+- [ ] Recover from a bad deployment.
+- [ ] Troubleshoot Karpenter failure.
+- [ ] Troubleshoot Argo CD failure.
+- [ ] Troubleshoot observability failure.
+- [ ] Perform backup and restore.
+- [ ] Test disaster recovery.
+- [ ] Write production runbooks.
+- [ ] Document architecture and operational procedures.
+
+### Final capstone
+Build and operate the complete production-oriented EKS platform defined in Phase 12.
+
+**Final certification checklist**
+- [ ] Explain the complete architecture without notes.
+- [ ] Troubleshoot Pods and deployments.
+- [ ] Troubleshoot Kubernetes networking and DNS.
+- [ ] Design an EKS VPC.
+- [ ] Provision EKS using Terraform.
+- [ ] Implement GitOps with Argo CD.
+- [ ] Explain Kubernetes scheduling.
+- [ ] Configure Karpenter NodePools.
+- [ ] Explain dynamic node provisioning.
+- [ ] Write useful PromQL queries.
+- [ ] Build Grafana dashboards.
+- [ ] Implement RBAC.
+- [ ] Implement NetworkPolicies.
+- [ ] Perform upgrades.
+- [ ] Recover from production failure scenarios.
+- [ ] Demonstrate backup and disaster recovery.
+- [ ] Explain the complete Git -> CI/CD -> ECR -> Argo CD -> EKS -> Karpenter -> Application flow.
+
 ## Final Architecture
 
 See [docs/architecture.md](docs/architecture.md).
