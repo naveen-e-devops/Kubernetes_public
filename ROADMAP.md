@@ -63,12 +63,12 @@ For every topic:
 
 ## Phase 0 — Foundations
 
-- [ ] [Topic 1: Linux fundamentals](docs/phase-0/01-linux-fundamentals.md)
-- [ ] [Topic 2: Networking fundamentals](docs/phase-0/02-networking-fundamentals.md)
-- [ ] DNS / HTTP / HTTPS
-- [ ] Git fundamentals
-- [ ] [Topic 3: YAML / JSON fundamentals](docs/phase-0/03-yaml-json-fundamentals.md)
-- [ ] Docker fundamentals
+- [x] [Topic 1: Linux fundamentals](docs/phase-0/01-linux-fundamentals.md)
+- [x] [Topic 2: Networking fundamentals](docs/phase-0/02-networking-fundamentals.md)
+- [x] [Topic 3: YAML / JSON fundamentals](docs/phase-0/03-yaml-json-fundamentals.md)
+- [x] [Topic 4: Git and GitHub fundamentals](docs/phase-0/04-git-github-fundamentals.md)
+- [ ] [Topic 5: DNS / HTTP / HTTPS](docs/phase-0/05-dns-http-https.md)
+- [ ] [Topic 6: Docker fundamentals](docs/phase-0/06-docker-container-fundamentals.md)
 - [ ] Container images
 - [ ] Container registries
 
