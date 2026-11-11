@@ -68,9 +68,9 @@ For every topic:
 - [x] [Topic 3: YAML / JSON fundamentals](docs/phase-0/03-yaml-json-fundamentals.md)
 - [x] [Topic 4: Git and GitHub fundamentals](docs/phase-0/04-git-github-fundamentals.md)
 - [ ] [Topic 5: DNS / HTTP / HTTPS](docs/phase-0/05-dns-http-https.md)
-- [ ] [Topic 6: Docker fundamentals](docs/phase-0/06-docker-container-fundamentals.md)
-- [ ] Container images
-- [ ] Container registries
+- [ ] [Topic 6: Docker and container fundamentals](docs/phase-0/06-docker-container-fundamentals.md)
+- [ ] [Topic 7: Container images](docs/phase-0/07-container-images.md)
+- [ ] [Topic 8: Container registries](docs/phase-0/08-container-registries.md)
 
 ### Assignment 0
 
