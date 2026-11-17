@@ -85,33 +85,23 @@ For every topic:
 
 ## Phase 1 — Kubernetes Fundamentals
 
-- [ ] Kubernetes architecture
-- [ ] Control plane
-- [ ] Worker nodes
-- [ ] API server
-- [ ] Scheduler
-- [ ] Controllers
-- [ ] etcd
-- [ ] kubelet
-- [ ] Pods
-- [ ] Namespaces
-- [ ] Deployments
-- [ ] ReplicaSets
-- [ ] Services
-- [ ] ConfigMaps
-- [ ] Secrets
-- [ ] kubectl
-- [ ] Kubernetes events
-- [ ] Basic troubleshooting
+**Detailed plan:** [Phase 1 — Kubernetes Fundamentals](docs/phase-1/README.md)
 
-### Assignment 1
+- [ ] Topic 1: Kubernetes architecture and components
+- [ ] Topic 2: Local cluster setup with kind
+- [ ] Topic 3: kubectl fundamentals
+- [ ] Topic 4: Pods and ReplicaSets
+- [ ] Topic 5: Deployments and rollouts
+- [ ] Topic 6: Services and service discovery
+- [ ] Topic 7: Namespaces and labels
+- [ ] Topic 8: ConfigMaps and Secrets
+- [ ] Topic 9: Resource requests and limits
+- [ ] Topic 10: Probes and health checks
+- [ ] Topic 11: Workload troubleshooting
 
-- [ ] Create a local Kubernetes cluster using kind.
-- [ ] Deploy nginx.
-- [ ] Scale 3 -> 5 replicas.
-- [ ] Delete a Pod and observe recovery.
-- [ ] Inspect logs and events.
-- [ ] Explain why the Pod was recreated.
+### Phase 1 Capstone
+
+Build and troubleshoot a small application on a local Kubernetes cluster. Include a Deployment, Service, configuration, resource requests/limits, health probes, and documented troubleshooting scenarios. See the detailed plan for assignments and exit criteria.
 
 ---
 
